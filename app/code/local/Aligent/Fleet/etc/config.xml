@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aligent_Fleet>
+            <version>0.0.1</version>
+        </Aligent_Fleet>
+    </modules>
+    <global>
+        <models>
+            <aligent_fleet>
+                <class>Aligent_Fleet_Model</class>
+                <resourceModel>aligent_fleet_resource</resourceModel>
+            </aligent_fleet>
+            <aligent_fleet_resource>
+                <class>Aligent_Fleet_Model_Resource</class>
+            </aligent_fleet_resource>
+        </models>
+        <helpers>
+            <aligent_fleet>
+                <class>Aligent_Fleet_Helper</class>
+            </aligent_fleet>
+        </helpers>
+    </global>
+
+    <phpunit>
+        <suite>
+            <modules>
+                <Aligent_Fleet/>
+            </modules>
+        </suite>
+    </phpunit>
+
+</config>
