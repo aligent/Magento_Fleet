@@ -15,14 +15,14 @@ $installer->setConfigData('system/varnishcache/servers', 'varnish-0;varnish-1');
 
 //get the default URL and set it down at website scope level
 $oDefaultWebsite = Mage::app()->getDefaultStoreView()->getWebsite();
-$vDefaultUrl = Mage::app()->getDefaultStoreView()->getBaseUrl();
-$installer->setConfigData('web/secure/base_url', $vDefaultUrl,'website',$oDefaultWebsite->getId());
+$vDefaultSecureUrl = Mage::getStoreConfig('web/secure/base_url');
+$installer->setConfigData('web/secure/base_url', $vDefaultSecureUrl,'websites',$oDefaultWebsite->getId());
 
 // So that we can set the base URL for the global scope to be the admin since this will be routed to a separate node
-$aDefaultUrlParts = parse_url($vDefaultUrl);
+$aDefaultUrlParts = parse_url($vDefaultSecureUrl);
 $vDefaultHostname = $aDefaultUrlParts['host'];
 
-$vAdminHostname = preg_replace('/vagrant\./', 'admin.', $vDefaultHostname);
+$vAdminHostname = preg_replace('/www\./', 'admin.', $vDefaultHostname);
 $vAdminUrl = $aDefaultUrlParts['scheme'].'://'.$vAdminHostname.$aDefaultUrlParts['path'];
 
 $installer->setConfigData('web/secure/base_url', $vAdminUrl);

@@ -1,12 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Aligent_Paypal>
+        <Aligent_Fleet>
             <active>true</active>
             <codePool>local</codePool>
-            <depends>
-                <Mage_Paypal/>
-            </depends>
-        </Aligent_Paypal>
+        </Aligent_Fleet>
     </modules>
 </config>

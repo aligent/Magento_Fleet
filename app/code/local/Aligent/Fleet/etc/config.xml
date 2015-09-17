@@ -11,10 +11,17 @@
                 <class>Aligent_Fleet_Model</class>
                 <resourceModel>aligent_fleet_resource</resourceModel>
             </aligent_fleet>
-            <aligent_fleet_resource>
-                <class>Aligent_Fleet_Model_Resource</class>
-            </aligent_fleet_resource>
         </models>
+        <resources>
+            <aligent_fleet_setup>
+                <setup>
+                    <module>Aligent_Fleet</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </aligent_fleet_setup>
+        </resources>
         <helpers>
             <aligent_fleet>
                 <class>Aligent_Fleet_Helper</class>
