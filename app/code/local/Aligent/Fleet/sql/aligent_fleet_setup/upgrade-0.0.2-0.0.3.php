@@ -11,7 +11,7 @@ $installer = $this;
 
 $installer->startSetup();
 
-if (!in_array('INDEX IDX_CORE_FILE_STORAGE_DIRECTORY', $installer->getConnection()->getIndexList($this->getTable('core_file_storage')))) {
+if (!array_key_exists('IDX_CORE_FILE_STORAGE_DIRECTORY', $installer->getConnection()->getIndexList($this->getTable('core_file_storage')))) {
 
     $installer->run("CREATE INDEX IDX_CORE_FILE_STORAGE_DIRECTORY ON {$this->getTable('core_file_storage')} (directory ASC);");
 
