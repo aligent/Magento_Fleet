@@ -2,7 +2,7 @@
 /**
  * Apply Anchor's recommended index to the core_file_storage table.
  * Ref: http://docs.anchorfleet.com/fleet-magento-1/troubleshooting/cms-images/
- * 
+ *
  * @author Jim O'Halloran <jim@aligent.com.au>
  */
 
