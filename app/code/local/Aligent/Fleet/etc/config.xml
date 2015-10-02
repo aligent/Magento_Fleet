@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Aligent_Fleet>
-            <version>0.0.4</version>
+            <version>0.0.5</version>
         </Aligent_Fleet>
     </modules>
     <global>
